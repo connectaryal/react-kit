@@ -20,10 +20,10 @@ export const buttonVariants = cva(
       },
       size: {
         xs: 'h-7  px-2.5 text-xs',
-        sm: 'h-8  px-3   text-sm',
-        md: 'h-10 px-4   text-sm',
-        lg: 'h-11 px-6   text-base',
-        xl: 'h-12 px-8   text-lg',
+        sm: 'h-8  px-3 text-sm',
+        md: 'h-10 px-4 text-sm',
+        lg: 'h-11 px-6 text-base',
+        xl: 'h-12 px-8 text-lg',
       },
       font: {
         normal: 'font-medium',
@@ -48,14 +48,13 @@ export const buttonVariants = cva(
       {
         variant: 'solid',
         intent: 'primary',
-        class:
-          'bg-primary     text-primary-foreground     hover:bg-primary/90     active:bg-primary/80',
+        class: 'bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/80',
       },
       {
         variant: 'solid',
         intent: 'secondary',
         class:
-          'bg-secondary   text-secondary-foreground   hover:bg-secondary/80   active:bg-secondary/70',
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80 active:bg-secondary/70',
       },
       {
         variant: 'solid',
@@ -68,13 +67,12 @@ export const buttonVariants = cva(
       {
         variant: 'outline',
         intent: 'primary',
-        class: 'border-primary     text-primary     hover:bg-primary/10     active:bg-primary/20',
+        class: 'border-primary text-primary hover:bg-primary/10 active:bg-primary/20',
       },
       {
         variant: 'outline',
         intent: 'secondary',
-        class:
-          'border-border      text-secondary-foreground   hover:bg-secondary      active:bg-secondary/70',
+        class: 'border-border text-secondary-foreground hover:bg-secondary active:bg-secondary/70',
       },
       {
         variant: 'outline',
@@ -87,12 +85,12 @@ export const buttonVariants = cva(
       {
         variant: 'ghost',
         intent: 'primary',
-        class: 'text-primary     hover:bg-primary/10     active:bg-primary/20',
+        class: 'text-primary hover:bg-primary/10 active:bg-primary/20',
       },
       {
         variant: 'ghost',
         intent: 'secondary',
-        class: 'text-secondary-foreground   hover:bg-secondary      active:bg-secondary/70',
+        class: 'text-secondary-foreground hover:bg-secondary active:bg-secondary/70',
       },
       {
         variant: 'ghost',
