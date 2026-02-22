@@ -1,8 +1,7 @@
-import { cn, iconSizes } from "@/utils"
-import { ButtonProps } from "./Button.type"
-import { buttonVariants } from "./Button.variant"
-import { Spinner } from "@/icons"
-
+import { cn, iconSizes } from '@/utils';
+import { ButtonProps } from './Button.type';
+import { buttonVariants } from './Button.variant';
+import { Spinner } from '@/icons';
 
 export const Button = ({
   variant,
@@ -30,7 +29,7 @@ export const Button = ({
       aria-busy={isLoading}
       className={cn(
         buttonVariants({ variant, intent, size, font, radius, iconButton, fullWidth }),
-        className
+        className,
       )}
       {...rest}
     >
@@ -41,13 +40,13 @@ export const Button = ({
         </>
       ) : (
         <>
-          {leftIcon  && <span className="shrink-0">{leftIcon}</span>}
+          {leftIcon && <span className='shrink-0'>{leftIcon}</span>}
           {children}
-          {rightIcon && <span className="shrink-0">{rightIcon}</span>}
+          {rightIcon && <span className='shrink-0'>{rightIcon}</span>}
         </>
       )}
     </button>
-  )
-}
+  );
+};
 
-Button.displayName = 'Button'
+Button.displayName = 'Button';

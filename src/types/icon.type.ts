@@ -1,6 +1,6 @@
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface IconProps {
-  size?: Size
-  className?: string
+  size?: Size;
+  className?: string;
 }
