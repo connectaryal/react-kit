@@ -29,6 +29,10 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./styles": {
+      "style": "./dist/style.css",       
+      "default": "./dist/style.css"      
     }
   },
   "files": [
@@ -37,8 +41,9 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "tsup && tailwindcss -i src/styles/index.css -o dist/style.css --minify",
-    "dev": "tsup --watch",
+    "dev": "tsup --watch & tailwindcss -i src/styles/index.css -o dist/style.css --watch",
+    "build": "tsup && pnpm build:css",
+    "build:css": "tailwindcss -i src/styles/index.css -o dist/style.css --minify",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",

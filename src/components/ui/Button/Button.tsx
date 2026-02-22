@@ -15,6 +15,7 @@ export const Button = ({
   children,
   disabled,
   className,
+  intent = 'primary',
   ref,
   ...rest
 }: ButtonProps) => {
@@ -24,7 +25,7 @@ export const Button = ({
       disabled={disabled || isLoading}
       aria-disabled={disabled || isLoading}
       aria-busy={isLoading}
-      className={cn(buttonVariants({ variant, size, iconButton, fullWidth }), className)}
+      className={cn(buttonVariants({ variant, size, iconButton, fullWidth, intent }), className)}
       {...rest}
     >
       {isLoading ? (

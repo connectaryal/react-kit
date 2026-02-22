@@ -18,6 +18,11 @@ export const buttonVariants = cva(
         link:        ['text-blue-600 bg-transparent', 'underline-offset-4 hover:underline active:text-blue-800', 'focus-visible:ring-blue-500', 'h-auto p-0'],
         destructive: ['bg-red-600 text-white', 'hover:bg-red-700 active:bg-red-800', 'focus-visible:ring-red-500'],
       },
+      intent: {
+        primary:     'focus-visible:ring-blue-500',
+        secondary:   'focus-visible:ring-gray-400',
+        destructive: 'focus-visible:ring-red-500',
+      },
       size: {
         xs: 'h-7 px-2.5 text-xs',
         sm: 'h-8 px-3 text-sm',
@@ -33,6 +38,26 @@ export const buttonVariants = cva(
       },
     },
     compoundVariants: [
+      // solid
+      { variant: 'solid', intent: 'primary',     class: 'bg-primary     text-primary-foreground     hover:bg-primary-hover     active:bg-primary-active'     },
+      { variant: 'solid', intent: 'secondary',   class: 'bg-secondary   text-secondary-foreground   hover:bg-secondary-hover   active:bg-secondary-active'   },
+      { variant: 'solid', intent: 'destructive', class: 'bg-destructive text-destructive-foreground hover:bg-destructive-hover active:bg-destructive-active' },
+
+      // outline
+      { variant: 'outline', intent: 'primary',     class: 'border-primary     text-primary     hover:bg-primary-hover/10'     },
+      { variant: 'outline', intent: 'secondary',   class: 'border-secondary   text-secondary-foreground   hover:bg-secondary-hover'   },
+      { variant: 'outline', intent: 'destructive', class: 'border-destructive text-destructive hover:bg-destructive-hover/10' },
+
+      // ghost
+      { variant: 'ghost', intent: 'primary',     class: 'text-primary     hover:bg-primary-hover/10'     },
+      { variant: 'ghost', intent: 'secondary',   class: 'text-secondary-foreground   hover:bg-secondary-hover'   },
+      { variant: 'ghost', intent: 'destructive', class: 'text-destructive hover:bg-destructive-hover/10' },
+
+      // link
+      { variant: 'link', intent: 'primary',     class: 'text-primary'     },
+      { variant: 'link', intent: 'secondary',   class: 'text-secondary-foreground'   },
+      { variant: 'link', intent: 'destructive', class: 'text-destructive' },
+
       { iconButton: true, size: 'xs', class: 'h-7 w-7' },
       { iconButton: true, size: 'sm', class: 'h-8 w-8' },
       { iconButton: true, size: 'md', class: 'h-10 w-10' },
