@@ -80,12 +80,7 @@
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "tailwindcss": ">=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "tailwindcss": {
-      "optional": true
-    }
+    "tailwindcss": ">=4.0.0"
   },
   "publishConfig": {
     "access": "public"

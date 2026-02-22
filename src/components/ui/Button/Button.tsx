@@ -1,11 +1,15 @@
-import { type ButtonProps } from './Button.type'
-import { buttonVariants } from './Button.variant'
-import { cn } from '@/utils'
-import { Spinner } from '@/icons/Spinner'
+import { cn, iconSizes } from "@/utils"
+import { ButtonProps } from "./Button.type"
+import { buttonVariants } from "./Button.variant"
+import { Spinner } from "@/icons"
+
 
 export const Button = ({
   variant,
+  intent,
   size,
+  font,
+  radius,
   iconButton,
   fullWidth,
   isLoading = false,
@@ -15,7 +19,6 @@ export const Button = ({
   children,
   disabled,
   className,
-  intent = 'primary',
   ref,
   ...rest
 }: ButtonProps) => {
@@ -25,17 +28,20 @@ export const Button = ({
       disabled={disabled || isLoading}
       aria-disabled={disabled || isLoading}
       aria-busy={isLoading}
-      className={cn(buttonVariants({ variant, size, iconButton, fullWidth, intent }), className)}
+      className={cn(
+        buttonVariants({ variant, intent, size, font, radius, iconButton, fullWidth }),
+        className
+      )}
       {...rest}
     >
       {isLoading ? (
         <>
-          <Spinner size={size ?? 'md'} />
+          <Spinner className={iconSizes[size ?? 'md']} />
           {loadingText ?? children}
         </>
       ) : (
         <>
-          {leftIcon && <span className="shrink-0">{leftIcon}</span>}
+          {leftIcon  && <span className="shrink-0">{leftIcon}</span>}
           {children}
           {rightIcon && <span className="shrink-0">{rightIcon}</span>}
         </>
@@ -43,3 +49,5 @@ export const Button = ({
     </button>
   )
 }
+
+Button.displayName = 'Button'
