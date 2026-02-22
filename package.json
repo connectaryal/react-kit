@@ -1,0 +1,86 @@
+{
+  "name": "@connectaryal/react-kit",
+  "version": "0.1.0",
+  "description": "A production-ready collection of essential React hooks and components. Built with TypeScript.",
+  "author": {
+    "name": "Shiva Aryal",
+    "email": "aryalshiva005@gmail.com",
+    "url": "https://shivaaryal.com.np"
+  },
+  "homepage": "https://github.com/connectaryal/react-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connectaryal/react-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/connectaryal/react-kit/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write src",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "components",
+    "typescript",
+    "library",
+    "ui",
+    "utilities"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@10.30.1",
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "prettier": "^3.2.5",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "tailwindcss": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
